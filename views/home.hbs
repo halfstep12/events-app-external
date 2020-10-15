@@ -9,8 +9,17 @@
         <div id="collapse-{{id}}" class="collapse border-dark" aria-labelledby="header-{{id}}" data-parent="#eventsAccordion"> 
           <div class="card-body border-dark">        
               <p class="card-text">{{ description }}</p>
-              <a href="#" class="card-link">TODO Edit Link</a>
-              <a href="#" class="card-link">TODO Delete Link</a>
+              <p class="card-text">Location: {{ location }}</p>
+              <p class="card-text">Likes: {{ likes }}</p>
+                <form method="POST" action="/event/like">
+                    <input type="hidden" value="{{id}}" name="id">
+                    <input class="btn btn-primary" type="submit" name="Like" value="Like">
+                </form>                
+                <form method="POST" action="/event/unlike">
+                    <input type="hidden" value="{{id}}" name="id">
+                    <input class="btn btn-primary" type="submit" name="UN-Like" value="UN-Like">
+                </form>              
+              
           </div>
         </div>
     </div>
