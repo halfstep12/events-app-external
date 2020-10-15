@@ -1,0 +1,19 @@
+<div class="accordion" id="eventsAccordion">
+  {{#events}}  
+    <div class="card border-dark mb-3" >
+        <div class="card-header border-dark" id="header-{{id}}">  
+            <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse-{{id}}" aria-expanded="true" aria-controls="collapse-{{id}}">                  
+              <h3 class="md-0">{{ title }}</h3>
+            </button>
+        </div>       
+        <div id="collapse-{{id}}" class="collapse border-dark" aria-labelledby="header-{{id}}" data-parent="#eventsAccordion"> 
+          <div class="card-body border-dark">        
+              <p class="card-text">{{ description }}</p>
+              <a href="#" class="card-link">TODO Edit Link</a>
+              <a href="#" class="card-link">TODO Delete Link</a>
+          </div>
+        </div>
+    </div>
+  {{/events}}
+</div>
+
